@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readmoo 工具整合箱</title>
+    <style>
+        :root {
+            --page-bg: #e8e6df;
+            --card-bg: #f8f7f2;
+            --gold: #b3a58e;
+            --milktea: #917c79;
+            --text-main: #6b6a66;
+            --shadow: rgba(0,0,0,0.08);
+        }
+
+        body {
+            font-family: -apple-system, "Noto Sans CJK TC", sans-serif;
+            background-color: var(--page-bg);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 50px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--milktea);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            color: var(--gold);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .nav-card {
+            background-color: var(--card-bg);
+            border-radius: 25px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: all 0.3s ease;
+            border: 1.5px solid transparent;
+        }
+
+        .nav-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(145, 124, 121, 0.15);
+        }
+
+        .icon-box {
+            background-color: var(--page-bg);
+            width: 60px;
+            height: 60px;
+            border-radius: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8rem;
+        }
+
+        .info-box {
+            flex: 1;
+        }
+
+        .info-box h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+            color: var(--milktea);
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--gold);
+        }
+
+        .arrow {
+            font-size: 1.2rem;
+            color: var(--gold);
+            opacity: 0.5;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 40px;
+            font-size: 0.75rem;
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Readmoo 閱讀助手</h1>
+        <p>選擇您需要的計算工具</p>
+    </header>
+
+    <div class="menu-grid">
+        <!-- 連結到單本計算機 -->
+        <a href="single.html" class="nav-card">
+            <div class="icon-box">📖</div>
+            <div class="info-box">
+                <h2>單本折扣計算</h2>
+                <p>即時試算各類優惠券組合</p>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+
+        <!-- 連結到多本計算機 (假設檔名為 multi.html) -->
+        <a href="multi.html" class="nav-card">
+            <div class="icon-box">📚</div>
+            <div class="info-box">
+                <h2>多本組合計算</h2>
+                <p>三本 75 折與滿額優惠試算</p>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+
+        <!-- 連結到簡單計算機 (假設檔名為 simple.html) -->
+        <a href="simple.html" class="nav-card">
+            <div class="icon-box">🧮</div>
+            <div class="info-box">
+                <h2>簡單計算機</h2>
+                <p>基礎數值快速加減乘除</p>
+            </div>
+            <div class="arrow">➔</div>
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2024 Readmoo 工具整合箱
+    </footer>
+
+</body>
+</html>
